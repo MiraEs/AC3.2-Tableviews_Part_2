@@ -43,9 +43,22 @@ class MovieTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         
         // 1. update our nav controller's tints and font
-        
-        // 2. add a new bar button
-        
+        if let navigationController: UINavigationController = self.navigationController {
+            navigationController.navigationBar.tintColor = UIColor.white
+            navigationController.navigationBar.barTintColor = UIColor.reelGoodGreen
+            navigationController.navigationBar.titleTextAttributes = [
+                NSForegroundColorAttributeName : UIColor.white,
+                NSFontAttributeName : UIFont.systemFont(ofSize: 24.0)
+            ]
+        }
+        // 2. add a new bar button/*
+        /*
+        let menuBarButton: UIBarButtonItem = UIBarButtonItem(image: UIImage(named: "reel"),
+                                                             style: .plain,
+                                                             target: nil,
+                                                             action: nil)
+        self.navigationItem.setLeftBarButton(menuBarButton, animated: false)
+ */
     }
 
     // MARK: - Table view data source

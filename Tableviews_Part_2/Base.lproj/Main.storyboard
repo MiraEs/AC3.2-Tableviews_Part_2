@@ -23,43 +23,41 @@
                                     <frame key="frameInset" width="375" height="199"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4LB-wF-4fS">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZP1-W4-dKf">
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="180" id="T93-CT-BF3"/>
-                                                <constraint firstAttribute="width" constant="120" id="t9V-X6-pcf"/>
+                                                <constraint firstAttribute="width" constant="120" id="Nfb-xG-wyL"/>
+                                                <constraint firstAttribute="height" constant="180" id="ckp-2p-0Vz"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Movie Title Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIc-8c-ZhZ">
-                                            <frame key="frameInset" minX="136" minY="16" width="223" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="Movie Title Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FM6-Vo-yYW">
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Movie Summary Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50y-zW-lZP">
-                                            <frame key="frameInset" minX="136" minY="45" width="223" height="135"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.32931122236810706" green="0.32355461156702148" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="Movie Summary Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDq-vr-Ydb">
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="0.55028201536131294" green="0.57970074535817362" blue="0.6363782051282052" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="50y-zW-lZP" firstAttribute="top" secondItem="YIc-8c-ZhZ" secondAttribute="bottom" constant="8" id="2BY-K0-WGk"/>
-                                        <constraint firstAttribute="bottom" secondItem="4LB-wF-4fS" secondAttribute="bottom" constant="8" id="2rV-0W-8XA"/>
-                                        <constraint firstItem="50y-zW-lZP" firstAttribute="leading" secondItem="4LB-wF-4fS" secondAttribute="trailing" constant="8" id="DrY-6L-KOX"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="50y-zW-lZP" secondAttribute="trailing" constant="8" id="MhH-gQ-dc0"/>
-                                        <constraint firstItem="YIc-8c-ZhZ" firstAttribute="top" secondItem="I3u-H0-aWI" secondAttribute="topMargin" constant="8" id="N0t-oa-3uG"/>
-                                        <constraint firstItem="4LB-wF-4fS" firstAttribute="centerY" secondItem="I3u-H0-aWI" secondAttribute="centerY" id="Onf-ui-0jz"/>
-                                        <constraint firstItem="4LB-wF-4fS" firstAttribute="leading" secondItem="I3u-H0-aWI" secondAttribute="leading" constant="8" id="Tza-OW-Vu3"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="50y-zW-lZP" secondAttribute="bottom" constant="8" id="kqg-aI-0TS"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="YIc-8c-ZhZ" secondAttribute="trailing" constant="8" id="nQA-VV-9FH"/>
-                                        <constraint firstItem="YIc-8c-ZhZ" firstAttribute="leading" secondItem="4LB-wF-4fS" secondAttribute="trailing" constant="8" id="qNW-4U-owI"/>
-                                        <constraint firstItem="4LB-wF-4fS" firstAttribute="top" secondItem="I3u-H0-aWI" secondAttribute="top" constant="8" id="u14-Kk-KoU"/>
+                                        <constraint firstItem="FM6-Vo-yYW" firstAttribute="leading" secondItem="ZP1-W4-dKf" secondAttribute="trailing" constant="8" id="2Ft-Eg-Noq"/>
+                                        <constraint firstItem="LDq-vr-Ydb" firstAttribute="leading" secondItem="ZP1-W4-dKf" secondAttribute="trailing" constant="8" id="Bhi-8C-iUw"/>
+                                        <constraint firstItem="FM6-Vo-yYW" firstAttribute="top" secondItem="I3u-H0-aWI" secondAttribute="topMargin" constant="8" id="IId-wN-jCb"/>
+                                        <constraint firstAttribute="bottom" secondItem="LDq-vr-Ydb" secondAttribute="bottom" constant="8" id="N9P-Dt-qLL"/>
+                                        <constraint firstAttribute="trailing" secondItem="LDq-vr-Ydb" secondAttribute="trailing" constant="8" id="VgI-AO-beW"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ZP1-W4-dKf" secondAttribute="bottom" constant="8" id="h1B-Vd-UyF"/>
+                                        <constraint firstItem="ZP1-W4-dKf" firstAttribute="leading" secondItem="I3u-H0-aWI" secondAttribute="leading" constant="8" id="ita-J3-MFf"/>
+                                        <constraint firstItem="LDq-vr-Ydb" firstAttribute="top" secondItem="FM6-Vo-yYW" secondAttribute="bottom" constant="8" id="jHK-jf-cZo"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="FM6-Vo-yYW" secondAttribute="trailing" constant="8" id="nwR-if-PSX"/>
+                                        <constraint firstItem="ZP1-W4-dKf" firstAttribute="centerY" secondItem="I3u-H0-aWI" secondAttribute="centerY" id="w4f-ca-J5O"/>
+                                        <constraint firstItem="ZP1-W4-dKf" firstAttribute="top" relation="greaterThanOrEqual" secondItem="I3u-H0-aWI" secondAttribute="top" constant="8" id="y9h-Gn-KOc"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="moviePosterImageView" destination="4LB-wF-4fS" id="PHf-UY-Itx"/>
-                                    <outlet property="movieSummaryLabel" destination="50y-zW-lZP" id="Cas-zX-ZDX"/>
-                                    <outlet property="movieTitleLabel" destination="YIc-8c-ZhZ" id="QFm-yO-78k"/>
+                                    <outlet property="moviePosterImageView" destination="ZP1-W4-dKf" id="sPl-kx-g7w"/>
+                                    <outlet property="movieSummaryLabel" destination="LDq-vr-Ydb" id="CWh-uy-4PY"/>
+                                    <outlet property="movieTitleLabel" destination="FM6-Vo-yYW" id="p5z-YV-9XH"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -68,7 +66,11 @@
                             <outlet property="delegate" destination="yet-gM-qc3" id="XBu-Bk-Pre"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="gWo-Yo-CxC"/>
+                    <navigationItem key="navigationItem" id="gWo-Yo-CxC">
+                        <barButtonItem key="leftBarButtonItem" image="reel" id="85A-Yg-Xk1">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RHw-bd-Gmq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -93,4 +95,7 @@
             <point key="canvasLocation" x="-194.40000000000001" y="64.31784107946028"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="reel" width="30" height="30"/>
+    </resources>
 </document>
