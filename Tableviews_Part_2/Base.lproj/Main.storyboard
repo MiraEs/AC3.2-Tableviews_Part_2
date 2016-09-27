@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,29 +16,51 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieTableViewCell" textLabel="puJ-wx-xmQ" detailTextLabel="FgW-Za-YEO" style="IBUITableViewCellStyleSubtitle" id="NQa-gd-usH">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieTableViewCell" rowHeight="200" id="NQa-gd-usH" customClass="MovieTableViewCell" customModule="Tableviews_Part_2" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="375" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NQa-gd-usH" id="I3u-H0-aWI">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="199"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="puJ-wx-xmQ">
-                                            <frame key="frameInset" minX="15" minY="4" width="34" height="21"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4LB-wF-4fS">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="180" id="T93-CT-BF3"/>
+                                                <constraint firstAttribute="width" constant="120" id="t9V-X6-pcf"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Movie Title Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YIc-8c-ZhZ">
+                                            <frame key="frameInset" minX="136" minY="16" width="223" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FgW-Za-YEO">
-                                            <frame key="frameInset" minX="15" minY="25" width="44" height="15"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <nil key="textColor"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Movie Summary Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50y-zW-lZP">
+                                            <frame key="frameInset" minX="136" minY="45" width="223" height="135"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.32931122236810706" green="0.32355461156702148" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="50y-zW-lZP" firstAttribute="top" secondItem="YIc-8c-ZhZ" secondAttribute="bottom" constant="8" id="2BY-K0-WGk"/>
+                                        <constraint firstAttribute="bottom" secondItem="4LB-wF-4fS" secondAttribute="bottom" constant="8" id="2rV-0W-8XA"/>
+                                        <constraint firstItem="50y-zW-lZP" firstAttribute="leading" secondItem="4LB-wF-4fS" secondAttribute="trailing" constant="8" id="DrY-6L-KOX"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="50y-zW-lZP" secondAttribute="trailing" constant="8" id="MhH-gQ-dc0"/>
+                                        <constraint firstItem="YIc-8c-ZhZ" firstAttribute="top" secondItem="I3u-H0-aWI" secondAttribute="topMargin" constant="8" id="N0t-oa-3uG"/>
+                                        <constraint firstItem="4LB-wF-4fS" firstAttribute="centerY" secondItem="I3u-H0-aWI" secondAttribute="centerY" id="Onf-ui-0jz"/>
+                                        <constraint firstItem="4LB-wF-4fS" firstAttribute="leading" secondItem="I3u-H0-aWI" secondAttribute="leading" constant="8" id="Tza-OW-Vu3"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="50y-zW-lZP" secondAttribute="bottom" constant="8" id="kqg-aI-0TS"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="YIc-8c-ZhZ" secondAttribute="trailing" constant="8" id="nQA-VV-9FH"/>
+                                        <constraint firstItem="YIc-8c-ZhZ" firstAttribute="leading" secondItem="4LB-wF-4fS" secondAttribute="trailing" constant="8" id="qNW-4U-owI"/>
+                                        <constraint firstItem="4LB-wF-4fS" firstAttribute="top" secondItem="I3u-H0-aWI" secondAttribute="top" constant="8" id="u14-Kk-KoU"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="moviePosterImageView" destination="4LB-wF-4fS" id="PHf-UY-Itx"/>
+                                    <outlet property="movieSummaryLabel" destination="50y-zW-lZP" id="Cas-zX-ZDX"/>
+                                    <outlet property="movieTitleLabel" destination="YIc-8c-ZhZ" id="QFm-yO-78k"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -56,7 +79,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KuV-Iy-6GA" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1jd-vJ-snn">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="1jd-vJ-snn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

@@ -25,6 +25,8 @@ class MovieTableViewController: UITableViewController {
 
         self.title = "Movies"
         // 1. need to update our table for self-sizing cells
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 200.0
         
         // converting from array of dictionaries
         // to an array of Movie structs
@@ -33,6 +35,8 @@ class MovieTableViewController: UITableViewController {
             movieContainer.append(Movie(from: rawMovie))
         }
         movieData = movieContainer
+        
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -55,6 +59,8 @@ class MovieTableViewController: UITableViewController {
             let data = byGenre(genre) else  {
                 return 0
         }
+        
+        
         return data.count
     }
     
@@ -67,6 +73,12 @@ class MovieTableViewController: UITableViewController {
         }
         
         // update to use a custom cell subclass
+        if let movieCell: MovieTableViewCell = cell as? MovieTableViewCell {
+            movieCell.movieTitleLabel.text = data[indexPath.row].title
+            movieCell.movieSummaryLabel.text = data[indexPath.row].summary
+            movieCell.moviePosterImageView.image = UIImage(named: data[indexPath.row].poster)
+            return movieCell
+        }
         
         cell.textLabel?.text = data[indexPath.row].title
         cell.detailTextLabel?.text = String(data[indexPath.row].year)

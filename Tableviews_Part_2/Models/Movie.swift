@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 internal struct Movie {
     
@@ -15,14 +16,18 @@ internal struct Movie {
     internal var cast: [Actor]
     internal var locations: [String]
     internal var summary: String
+    internal var poster: UIImage
     
+
+
     init(from data: [String : Any]) {
         
         if let movieTitle: String = data["name"] as? String,
             let movieYear: Int = data["year"] as? Int,
             let movieGenre: String = data["genre"] as? String,
             let movieLocations: [String] = data["locations"] as? [String],
-            let movieSynopsis: String = data["description"] as? String
+            let movieSynopsis: String = data["description"] as? String,
+            let moviePoster: UIImage = data["poster"] as? UIImage
             // 1. we'll need to update our model to include the "poster" key
         {
             
@@ -31,6 +36,7 @@ internal struct Movie {
             self.genre = movieGenre
             self.locations = movieLocations
             self.summary = movieSynopsis
+            self.poster = moviePoster
             
             if let allActorNames: [String] = data["cast"] as? [String] {
                 var castContainer: [Actor] = []
@@ -59,5 +65,6 @@ internal struct Movie {
         self.cast = []
         self.locations = []
         self.summary = ""
+        self.poster = #imageLiteral(resourceName: "titanic_small")
     }
  }
