@@ -23,17 +23,33 @@
                                     <frame key="frameInset" width="375" height="199"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZP1-W4-dKf">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZP1-W4-dKf">
+                                            <frame key="frameInset" minX="8" minY="55" width="120" height="133"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="120" id="Nfb-xG-wyL"/>
                                                 <constraint firstAttribute="height" constant="180" id="ckp-2p-0Vz"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="Movie Title Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FM6-Vo-yYW">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" text="Movie Title Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FM6-Vo-yYW">
+                                            <frame key="frameInset" minX="8" width="223" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odZ-cV-VGo">
+                                            <frame key="frameInset" minX="333" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RVU-z3-PyI">
+                                            <frame key="frameInset" minX="8" minY="29" width="359" height="5"/>
+                                            <color key="backgroundColor" red="0.21763951100000001" green="0.88835487570000005" blue="0.33454700780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="10" id="gTg-YH-bFr"/>
+                                            </constraints>
+                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" text="Movie Summary Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDq-vr-Ydb">
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" red="0.55028201536131294" green="0.57970074535817362" blue="0.6363782051282052" alpha="1" colorSpace="calibratedRGB"/>
@@ -41,16 +57,20 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="FM6-Vo-yYW" firstAttribute="leading" secondItem="ZP1-W4-dKf" secondAttribute="trailing" constant="8" id="2Ft-Eg-Noq"/>
+                                        <constraint firstItem="FM6-Vo-yYW" firstAttribute="leading" secondItem="ZP1-W4-dKf" secondAttribute="trailing" constant="-120" id="2Ft-Eg-Noq"/>
                                         <constraint firstItem="LDq-vr-Ydb" firstAttribute="leading" secondItem="ZP1-W4-dKf" secondAttribute="trailing" constant="8" id="Bhi-8C-iUw"/>
-                                        <constraint firstItem="FM6-Vo-yYW" firstAttribute="top" secondItem="I3u-H0-aWI" secondAttribute="topMargin" constant="8" id="IId-wN-jCb"/>
+                                        <constraint firstItem="FM6-Vo-yYW" firstAttribute="top" secondItem="I3u-H0-aWI" secondAttribute="topMargin" id="IId-wN-jCb"/>
                                         <constraint firstAttribute="bottom" secondItem="LDq-vr-Ydb" secondAttribute="bottom" constant="8" id="N9P-Dt-qLL"/>
+                                        <constraint firstItem="RVU-z3-PyI" firstAttribute="leading" secondItem="I3u-H0-aWI" secondAttribute="leadingMargin" id="PMq-5m-Q4q"/>
+                                        <constraint firstItem="RVU-z3-PyI" firstAttribute="leading" secondItem="I3u-H0-aWI" secondAttribute="leadingMargin" id="RMt-8e-Kc4"/>
                                         <constraint firstAttribute="trailing" secondItem="LDq-vr-Ydb" secondAttribute="trailing" constant="8" id="VgI-AO-beW"/>
                                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ZP1-W4-dKf" secondAttribute="bottom" constant="8" id="h1B-Vd-UyF"/>
                                         <constraint firstItem="ZP1-W4-dKf" firstAttribute="leading" secondItem="I3u-H0-aWI" secondAttribute="leading" constant="8" id="ita-J3-MFf"/>
-                                        <constraint firstItem="LDq-vr-Ydb" firstAttribute="top" secondItem="FM6-Vo-yYW" secondAttribute="bottom" constant="8" id="jHK-jf-cZo"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="FM6-Vo-yYW" secondAttribute="trailing" constant="8" id="nwR-if-PSX"/>
-                                        <constraint firstItem="ZP1-W4-dKf" firstAttribute="centerY" secondItem="I3u-H0-aWI" secondAttribute="centerY" id="w4f-ca-J5O"/>
+                                        <constraint firstItem="LDq-vr-Ydb" firstAttribute="top" secondItem="FM6-Vo-yYW" secondAttribute="bottom" constant="16" id="jHK-jf-cZo"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="FM6-Vo-yYW" secondAttribute="trailing" constant="136" id="nwR-if-PSX"/>
+                                        <constraint firstItem="RVU-z3-PyI" firstAttribute="trailing" secondItem="I3u-H0-aWI" secondAttribute="trailingMargin" id="o2t-Nw-buR"/>
+                                        <constraint firstItem="RVU-z3-PyI" firstAttribute="trailing" secondItem="I3u-H0-aWI" secondAttribute="trailingMargin" id="oRY-ME-J5V"/>
+                                        <constraint firstItem="ZP1-W4-dKf" firstAttribute="centerY" secondItem="I3u-H0-aWI" secondAttribute="centerY" constant="18" id="w4f-ca-J5O"/>
                                         <constraint firstItem="ZP1-W4-dKf" firstAttribute="top" relation="greaterThanOrEqual" secondItem="I3u-H0-aWI" secondAttribute="top" constant="8" id="y9h-Gn-KOc"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -58,6 +78,7 @@
                                     <outlet property="moviePosterImageView" destination="ZP1-W4-dKf" id="sPl-kx-g7w"/>
                                     <outlet property="movieSummaryLabel" destination="LDq-vr-Ydb" id="CWh-uy-4PY"/>
                                     <outlet property="movieTitleLabel" destination="FM6-Vo-yYW" id="p5z-YV-9XH"/>
+                                    <outlet property="movieYearLabel" destination="odZ-cV-VGo" id="sSo-0c-DHo"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

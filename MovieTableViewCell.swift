@@ -21,6 +21,7 @@ class MovieTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBOutlet weak var movieYearLabel: UILabel!
     @IBOutlet weak var movieTitleLabel: UILabel!
     @IBOutlet weak var movieSummaryLabel: UILabel!
     @IBOutlet weak var moviePosterImageView: UIImageView!

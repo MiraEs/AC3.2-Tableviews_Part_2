@@ -85,11 +85,16 @@ class MovieTableViewController: UITableViewController {
             return cell
         }
         
+        //green separator line
+//        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.singleLine
+//        self.tableView.separatorColor = UIColor.green
+        
         // update to use a custom cell subclass
         if let movieCell: MovieTableViewCell = cell as? MovieTableViewCell {
             movieCell.movieTitleLabel.text = data[indexPath.row].title
             movieCell.movieSummaryLabel.text = data[indexPath.row].summary
             movieCell.moviePosterImageView.image = UIImage(named: data[indexPath.row].poster)
+            movieCell.movieYearLabel.text = String(data[indexPath.row].year)
             return movieCell
         }
         
