@@ -43,10 +43,22 @@ class MovieTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         
         // 1. update our nav controller's tints and font
+        /*
         if let navigationController: UINavigationController = self.navigationController {
             navigationController.navigationBar.tintColor = UIColor.white
             navigationController.navigationBar.barTintColor = UIColor.reelGoodGreen
             navigationController.navigationBar.titleTextAttributes = [
+                NSForegroundColorAttributeName : UIColor.white,
+                NSFontAttributeName : UIFont.systemFont(ofSize: 24.0)
+            ]
+        }
+         */
+        
+        if let navigationController: UINavigationController = self.navigationController {
+            navigationController.navigationBar.tintColor = UIColor.blue
+            navigationController.navigationBar.barTintColor = UIColor.reelGoodGray
+            navigationController.navigationBar.titleTextAttributes = [
+                NSForegroundColorAttributeName : UIColor.white,
                 NSForegroundColorAttributeName : UIColor.white,
                 NSFontAttributeName : UIFont.systemFont(ofSize: 24.0)
             ]
